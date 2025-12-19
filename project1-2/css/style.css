@@ -38,6 +38,7 @@ header {
     z-index: 1000;
 }
 
+
 .header-content {
     display: flex;
     justify-content: space-between;
@@ -92,7 +93,6 @@ header {
     max-width: 415px;
 }
 
-
 /*============ gallery section ========== */
 .gallery-content {
     display: flex;
@@ -129,7 +129,6 @@ header {
     margin-bottom: 36px;
 }
 
-/* gallery-2 */
 .gallery-2 {
     display: flex;
     flex-direction: column;
@@ -142,7 +141,7 @@ header {
     text-align: center;
 }
 
-.gallery-2 .text-box-1 h4 {
+.gallery-2 .text-box-1 h3 {
     color: var(--point-color);
     font-size: 48px;
     margin-bottom: 36px;
@@ -162,6 +161,7 @@ header {
     gap: 20px;
 }
 
+
 /* gallery-3 */
 .gallery-3 {
     display: flex;
@@ -173,17 +173,11 @@ header {
     border-radius: 30px;
     gap: 140px
 
-    margin-bottom: -100px; 
-    /* 내 키의 절반 정도를 아래로 밀어버림 */
-    position: relative;
-    z-index: 10;
-   
 }
 
 .gallery-3 .text-box {
     color: var(--white);
     max-width: 600px   ;
-    margin-right: 140px;
 }
 
 .gallery-3 .main-text {
@@ -207,7 +201,6 @@ header {
     background: none;
     outline: none;
     padding: 16px 20px;
-    width: 200px;
     font-size: 16px;
 }
 
@@ -233,14 +226,84 @@ header {
     gap: 20px;
 }
 
+
 @media (max-width: 768px) {
-    .hero-section, .main-intro {
+    .container {
+        font-size: 14px;
+    }
+    .navbar {display: none;}
+
+    /* hero-section */
+    .hero-content {
         flex-direction: column;
+        gap: 32px;
     }
 
-    .hero-section .img-box, .main-intro .img-box {
-        width: 100%;
-        height: auto;
-        margin: 20px 0;
+    .hero .text-box {
+        align-items: center;
+        text-align: center;
+        gap: 20px
     }
+
+    .hero-content .text-box h1 {
+        font-size: 24px;
+        gap: 32px;
+    }
+
+    /* gallery section */
+    .gallery-content {
+    gap: 60px;
+    margin: 80px auto;
+    max-width: 326px;
+    }
+
+    /* gallery-1 */
+    .gallery-1 {
+        flex-direction: column;
+        gap: 32px
+    }
+
+    .gallery-1 .text-box h2 {
+        font-size:24px;
+        margin-bottom: 16px;
+        text-align: left;
+        }
+
+    .gallery-2 {
+    gap: 50px;
+    }
+
+    .gallery-2 .text-box-1 h3 {
+    font-size:24px;
+    margin-bottom: 16px;
+    }
+
+    .gallery-2 .gallery-grid {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
+    }
+
+    .gallery-2 .text-box-2 {
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    }
+
+    /* gallery-3 */
+    .gallery-3 {
+    flex-direction: column;
+    }
+
+    .gallery-3 .input-box input {
+    border: none;
+    background: none;
+    outline: none;
+    padding: 16px 20px;
+    }
+
+    .gallery-3 .input-box .btn-subscribe {
+    border: none;
+    margin: 5px;
+    }
+
 }
