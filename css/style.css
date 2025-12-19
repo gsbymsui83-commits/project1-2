@@ -1,0 +1,246 @@
+:root {
+    --main-color: #F2E9D8;
+    --point-color: #D97652;
+    --white: #FFFFFF;
+    --black: #000000;
+    --navy: #263140;
+
+    --container: 1200px
+}
+
+/* 공통클래스 container, img, btn */
+.container {
+    max-width: var(--container);    
+    margin: 0 auto;  
+    padding: 0 20px; 
+}
+
+.btn {
+   padding: 15px 30px; 
+   width:fit-content;
+   background-color: var(--point-color);
+   color: var(--white);
+   border-radius: 40px;
+}
+
+img {
+    max-width: 100%; display: block;
+    border-radius: 30px;
+    }
+
+/*============ header========== */
+header {
+    background-color: var(--main-color);
+    width: 100%;
+    position: fixed;
+    top:0;
+    left:0;
+    z-index: 1000;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 25px auto;
+}
+
+/* .logo {
+    aspect-ratio: 130/40;
+} */
+.navbar {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.navbar li:last-child {
+    margin-left: 40px;
+}
+
+/* 헤더 아래에 있는 hero 섹션 */
+.hero  {
+    background-color: var(--main-color);
+    width: 100%;
+    
+}
+.hero-content {
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    /* gap:40px */
+}
+
+.hero .text-box {
+    /* margin:  */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 734px;
+    flex: 1 1 734px;
+    gap: 40px;
+    max-width: 60%;
+}
+
+.hero .text-box h1 {
+    font-size: 48px;
+    font-weight: bold;
+}
+
+.hero .img-box {
+    flex: 1 1 415px;
+    max-width: 415px;
+}
+
+
+/*============ gallery section ========== */
+.gallery-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 110px;
+    margin: 80px auto;
+}
+
+/* gallery-1 */
+.gallery-1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+}
+
+.gallery-1 .img-box {
+    max-width: 660px;
+    flex: 1 1 660px;
+    
+}
+
+.gallery-1 .text-box {
+    max-width: 510px;
+}
+
+.gallery-1 .text-box h2 {
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 36px;
+}
+
+/* gallery-2 */
+.gallery-2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+}
+
+.gallery-2 .text-box-1 {
+    text-align: center;
+}
+
+.gallery-2 .text-box-1 h4 {
+    color: var(--point-color);
+    font-size: 48px;
+    margin-bottom: 36px;
+}
+
+.gallery-2 .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 73px;
+}
+
+.gallery-2 .text-box-2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+/* gallery-3 */
+.gallery-3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding : 50px 60px;
+    background-color: var(--navy);
+    border-radius: 30px;
+    gap: 140px
+
+    margin-bottom: -100px; 
+    /* 내 키의 절반 정도를 아래로 밀어버림 */
+    position: relative;
+    z-index: 10;
+   
+}
+
+.gallery-3 .text-box {
+    color: var(--white);
+    max-width: 600px   ;
+    margin-right: 140px;
+}
+
+.gallery-3 .main-text {
+    font-size: 36px;
+    margin-bottom: 14px;
+}
+
+/* input box */
+.gallery-3 .input-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--white);
+    border-radius:60px;
+    /* width: 400px; */
+    gap: 10px;
+}
+
+.gallery-3 .input-box input {
+    border: none;
+    background: none;
+    outline: none;
+    padding: 16px 20px;
+    width: 200px;
+    font-size: 16px;
+}
+
+.gallery-3 .input-box .btn-subscribe {
+    border: none;
+    margin: 5px;
+}
+
+/* ====================footer====================== */
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 25px auto;
+}
+
+.footer-content .logo {
+    aspect-ratio: 226/70;
+}
+.sns {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+@media (max-width: 768px) {
+    .hero-section, .main-intro {
+        flex-direction: column;
+    }
+
+    .hero-section .img-box, .main-intro .img-box {
+        width: 100%;
+        height: auto;
+        margin: 20px 0;
+    }
+}
